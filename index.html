@@ -1,0 +1,31 @@
+<!doctype HTML>
+<html>
+  <head>
+    <script src="js/jquery.js"></script>
+    <script src="js/webpd.js"></script>
+      <script src="js/two.js"></script>
+    <script>
+        var patch
+        $.get('patches/test.pd', function(patchStr) {
+          patch = Pd.loadPatch(patchStr)
+
+
+
+        
+
+
+        })
+
+        
+    </script>
+    
+  </head>
+
+  <body><button id="startButton">Start patch</button>
+<script>
+  // Now, when user clicks on button, Pd will start and sound should work even on iOS.
+  var button = document.getElementById('startButton')
+  Pd.startOnClick(button);
+</script>
+     </body>
+</html>
